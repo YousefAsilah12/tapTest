@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="body">
+    <section class="body-container">
+        <header class="nav-container">
+            <nav class="nav-bar">
+                <a class="nav-item active" href="active">Home</a>
+                <a class="nav-item" href="">About Me</a>
+                <a class="nav-item" href="">Contact Me</a>
+            </nav>
+        </header>
+        <section class="body-mid-container">
+            <article class="left-part">
+                <header class="white-blue small ">Welcome to my site </header>
+                <p class="title large blue bold">Hi, I'm Yousef,a software <span class="orange">Developer</span></p>
+                <article>
+                    <div class="paragraph-container">
+                        <p class=" black small bold  text-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Est
+                            eligendi corporis
+                            qui
+                            voluptatum iste
+                            atque, sapiente necessitatibus vero, ad doloribus corrupti error deleniti voluptatem dolorum
+                            earum
+                            nam,
+                            tempora voluptatibus ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ab
+                            dolor
+                            commodi
+                            sequi odio adipisci ipsam, voluptates, distinctio sapiente est vero nisi quasi sit, vel ut
+                            consectetur.
+                            Architecto, facere dignissimos.
+                        </p>
+                    </div>
+                    <a href="#" class="seeMoreButton blue" onclick="toggleSeeMore()">See More</a>
+                </article>
+
+            </article>
+            <article class="image-container">
+                <img src="./imgs/girl.png" alt="">
+            </article>
+        </section>
+        <article class="buttons-contiainer">
+            <button class="button bold  activeButton">Hire me !</button>
+            <button class="button bold" onclick="window.location.href='https://www.google.com'">See My Project</button>
+        </article>
+
+        </article>
+    </section>
+</body>
+<script>
+    function toggleSeeMore() {
+        var paragraphContainer = document.querySelector('.paragraph-container');
+        var expanded = paragraphContainer.classList.contains('expanded');
+        const text = document.querySelector('.seeMoreButton');
+        if (expanded) {
+            // If already expanded, collapse it
+            paragraphContainer.style.maxHeight = '50px'; // Set the initial height when collapsing
+            paragraphContainer.classList.remove('expanded');
+            text.innerHTML = 'see more';
+        } else {
+            // If not expanded, expand it
+            paragraphContainer.style.maxHeight = '100%'; // Allow container to expand to full height
+            paragraphContainer.classList.add('expanded');
+            text.innerHTML = 'see less';
+        }
+    }
+
+
+</script>
+
+</html>
